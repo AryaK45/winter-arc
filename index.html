@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0f14">
+<link rel="manifest" href="manifest.json">
+<title>Winter Arc — V2</title>
+<style>
+:root{--bg:#090d12;--panel:#111820;--panel2:#17212c;--line:#273443;--text:#f5f7fa;--muted:#9aa8b6;--gold:#f59e0b;--gold2:#fb923c;--green:#22c55e;--red:#ef4444;--blue:#60a5fa}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#17202a 0,#090d12 55%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh}
+button,input,textarea,select{font:inherit}button{cursor:pointer}.app{display:flex;min-height:100vh}.side{width:245px;background:#0b1016;border-right:1px solid var(--line);padding:20px 14px;position:sticky;top:0;height:100vh}.brand{font-weight:900;font-size:23px;letter-spacing:-1px;padding:8px 10px 22px}.brand span{color:var(--gold)}.nav{display:grid;gap:7px}.nav button{background:transparent;color:#b9c5d0;border:1px solid transparent;text-align:left;padding:12px 13px;border-radius:11px}.nav button.active,.nav button:hover{background:var(--panel2);color:#fff;border-color:var(--line)}.main{flex:1;max-width:1400px;margin:auto;padding:24px;width:100%}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}.eyebrow{color:var(--gold);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1.2px}.title{font-size:clamp(30px,4vw,48px);font-weight:900;letter-spacing:-2px;margin:4px 0}.sub{color:var(--muted)}.pill{padding:9px 12px;border:1px solid #6d4a12;background:#261b09;color:#fbbf24;border-radius:999px;font-weight:800;font-size:12px}.page{display:none}.page.active{display:block}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:rgba(17,24,32,.94);border:1px solid var(--line);border-radius:16px;padding:17px}.metric{font-size:28px;font-weight:900;margin-top:5px}.label{font-size:12px;color:var(--muted)}.bar{height:9px;background:#202b36;border-radius:99px;overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:99px}.section{margin-top:15px}.section h2{font-size:19px;margin:0 0 14px}.grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:15px}.habits{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.habit{display:flex;align-items:center;gap:10px;background:#0e151d;border:1px solid var(--line);padding:12px;border-radius:11px;font-size:13px}.habit input{width:20px;height:20px;accent-color:var(--gold)}.btn{background:#18222d;color:#fff;border:1px solid var(--line);padding:9px 13px;border-radius:9px;font-weight:750}.btn:hover{border-color:#56687a}.primary{background:var(--gold);color:#111;border-color:var(--gold)}.danger{background:#251214;color:#fecaca;border-color:#6f2429}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.input,.select,textarea{background:#0b1118;color:#fff;border:1px solid var(--line);border-radius:9px;padding:9px;width:100%;outline:none}.input:focus,textarea:focus{border-color:var(--gold)}textarea{min-height:90px;resize:vertical}.dailyhead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:14px}.datepick{width:auto}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}.cal{background:#0e151d;border:1px solid var(--line);border-radius:9px;color:#fff;padding:11px 4px;text-align:center}.cal.done{background:#12351f;border-color:#258244}.cal.sel{outline:2px solid var(--gold)}.cal small{color:var(--muted)}.xp{color:#fbbf24;font-weight:900}.subjectGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.subject{min-height:180px}.subject h3{margin:0 0 7px}.subject .pct{font-size:24px;font-weight:900}.topics{display:grid;gap:6px;margin-top:12px}.topic{display:flex;gap:8px;align-items:center;font-size:12px}.topic input{accent-color:var(--green)}.addtopic{display:flex;gap:6px;margin-top:10px}.addtopic input{min-width:0}.timer{text-align:center;padding:28px}.time{font-size:76px;font-weight:900;letter-spacing:-3px;margin:5px}.timerbar{max-width:650px;margin:20px auto}.timer label{color:var(--muted);font-size:13px}.reviewGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.toast{position:fixed;right:18px;bottom:18px;background:#f59e0b;color:#111;padding:12px 15px;border-radius:11px;font-weight:800;opacity:0;transform:translateY(12px);transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:none}.muted{color:var(--muted)}.small{font-size:12px}.achievement{display:flex;justify-content:space-between;gap:10px;padding:11px;border:1px solid var(--line);border-radius:10px;margin-top:8px}.locked{opacity:.45}.list{display:grid;gap:8px}.score{font-weight:900}.weekrow{display:grid;grid-template-columns:110px 1fr 110px;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+@media(max-width:1050px){.side{width:190px}.cards{grid-template-columns:repeat(2,1fr)}.subjectGrid{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+@media(max-width:700px){.app{display:block}.side{width:100%;height:auto;position:relative;border-right:0;border-bottom:1px solid var(--line)}.nav{grid-template-columns:repeat(3,1fr)}.nav button{font-size:11px;padding:9px}.main{padding:15px}.cards{grid-template-columns:repeat(2,1fr)}.subjectGrid,.reviewGrid,.habits{grid-template-columns:1fr}.calendar{gap:4px}.cal{padding:8px 2px;font-size:11px}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+<div class="brand">❄️ WINTER <span>ARC</span><div class="small muted">V2 • OCTOBER 2026</div></div>
+<nav class="nav">
+<button data-page="dashboard" class="active">🏠 Dashboard</button>
+<button data-page="daily">✅ Daily</button>
+<button data-page="backlogs">🎯 Backlogs</button>
+<button data-page="pomodoro">⏱️ Pomodoro</button>
+<button data-page="reviews">📊 Reviews</button>
+<button data-page="settings">⚙️ Settings</button>
+</nav>
+</aside>
+<main class="main">
+<header class="top">
+<div><div class="eyebrow">October 1 — October 31</div><div class="title">Winter Arc</div><div class="sub">Consistency over motivation. One day at a time.</div></div>
+<div class="pill">🔥 <span id="topStreak">0</span> day streak</div>
+</header>
+
+<section id="dashboard" class="page active">
+<div class="cards">
+<div class="card"><div class="label">LEVEL</div><div class="metric" id="level">1</div><div class="small muted">XP <span id="xp">0</span> / <span id="nextxp">500</span></span></div><div class="bar"><i id="xpbar"></i></div></div>
+<div class="card"><div class="label">DAYS COMPLETED</div><div class="metric" id="days">0/31</div><div class="bar"><i id="daybar"></i></div></div>
+<div class="card"><div class="label">STUDY HOURS</div><div class="metric" id="studyTotal">0h</div><div class="small muted">October total</div></div>
+<div class="card"><div class="label">HABIT COMPLETION</div><div class="metric" id="habitPct">0%</div><div class="small muted">all 31 days</div></div>
+</div>
+<div class="grid2 section">
+<div class="card"><h2>🎯 October mission</h2><div class="label">Monthly progress</div><div class="bar"><i id="missionbar"></i></div><p class="small muted" id="missiontext"></p><div class="row"><button class="btn primary" onclick="go('daily')">Log today</button><button class="btn" onclick="go('backlogs')">Open backlogs</button></div></div>
+<div class="card"><h2>🏆 Achievements</h2><div id="achievements"></div></div>
+</div>
+<div class="card section"><h2>📅 October</h2><div class="calendar" id="dashcal"></div></div>
+</section>
+
+<section id="daily" class="page">
+<div class="card">
+<div class="dailyhead"><div><h2 style="margin:0">Daily tracker</h2><div class="small muted">Complete at least 6/8 habits for a completed day.</div></div><select class="select datepick" id="daySelect" onchange="selectDay(+this.value)"></select></div>
+<div class="grid2">
+<div><h2 id="dayTitle">Day 1</h2><div class="habits" id="habitList"></div><div class="row" style="margin-top:12px"><button class="btn primary" onclick="allHabits()">✓ Complete all</button><button class="btn" onclick="resetDay()">Reset day</button></div></div>
+<div><h2>Numbers</h2><label class="small muted">Study hours<input class="input" id="studyInput" type="number" min="0" max="24" step=".25"></label><br><label class="small muted">Sleep hours<input class="input" id="sleepInput" type="number" min="0" max="24" step=".25"></label><br><label class="small muted">Notes<textarea id="notesInput" placeholder="How did today go?"></textarea></label></div>
+</div>
+</div>
+<div class="card section"><h2>Month calendar</h2><div class="calendar" id="dailycal"></div></div>
+</section>
+
+<section id="backlogs" class="page">
+<div class="card"><h2>🎯 Backlog Command Center</h2><p class="muted small">Track your six SE backlog subjects. Add your own topics/units as you study them.</p><div class="subjectGrid" id="subjects"></div></div>
+</section>
+
+<section id="pomodoro" class="page">
+<div class="card timer">
+<h2>⏱️ Focus Timer</h2><div class="time" id="time">25:00</div><div class="muted" id="timerStatus">Ready to focus.</div>
+<div class="timerbar"><div class="bar"><i id="timerbar"></i></div></div>
+<div class="row" style="justify-content:center"><button class="btn primary" onclick="startTimer()">▶ Start</button><button class="btn" onclick="pauseTimer()">⏸ Pause</button><button class="btn" onclick="resetTimer()">↺ Reset</button></div>
+<div class="row" style="justify-content:center;margin-top:14px"><button class="btn" onclick="setTimer(25)">25 min</button><button class="btn" onclick="setTimer(50)">50 min</button><button class="btn" onclick="setTimer(90)">90 min</button></div>
+<p class="small muted">Each completed focus session gives +50 XP.</p>
+</div>
+</section>
+
+<section id="reviews" class="page">
+<div class="card"><h2>📊 Weekly check-ins</h2><div id="weekly"></div></div>
+<div class="card section"><h2>📝 Monthly reflection</h2><div class="reviewGrid" id="reflection"></div></div>
+</section>
+
+<section id="settings" class="page">
+<div class="card"><h2>⚙️ Settings & backup</h2><p class="muted">Your data is stored locally in this browser.</p><div class="row"><button class="btn" onclick="exportData()">⬇ Export backup</button><button class="btn" onclick="document.getElementById('import').click()">⬆ Import backup</button><input id="import" type="file" accept=".json" hidden onchange="importData(event)"><button class="btn danger" onclick="resetAll()">Reset everything</button></div><hr style="border-color:var(--line);margin:20px 0"><h2>📱 Install app</h2><p class="small muted">When running through Live Server, Chrome/Edge may offer an Install button in the address bar. Use it to get Winter Arc as its own app window.</p></div>
+</section>
+</main></div><div class="toast" id="toast"></div>
+
+<script>
+const KEY="winterArcV2";
+const OLD="winterArcOct2026";
+const HABITS=[
+["study","📚 Study 3 focused hours"],["workout","🏋️ Workout"],["sleep","😴 Sleep 7+ hours"],
+["social","📱 Social media ≤ 2h"],["gaming","🎮 Gaming only after study"],
+["water","💧 Water 2–3L"],["meals","🍽️ 3 proper meals"],["zero","🧠 No-zero-day"]
+];
+const SUBJECTS=["CT","FM","SA","Survey","MOS","M3"];
+let selected=0,timer=null,timerSec=1500,timerTotal=1500;
+let state=JSON.parse(localStorage.getItem(KEY)||"null");
+if(!state){
+ const old=JSON.parse(localStorage.getItem(OLD)||"null");
+ state={days:{},subjects:{},reviews:{},refs:{},xp:0,focusSessions:0};
+ if(old?.days) state.days=old.days;
+ if(old?.reviews) state.reviews=old.reviews;
+ SUBJECTS.forEach(s=>state.subjects[s]=[]);
+ localStorage.setItem(KEY,JSON.stringify(state));
+}
+SUBJECTS.forEach(s=>{if(!state.subjects[s])state.subjects[s]=[]});
+function save(){localStorage.setItem(KEY,JSON.stringify(state));render();}
+function day(i){return state.days[i]||(state.days[i]={habits:{},study:"",sleep:"",notes:""})}
+function count(i){return HABITS.filter(x=>day(i).habits[x[0]]).length}
+function done(i){return count(i)>=6}
+function xpCalc(){
+ let x=state.xp||0;
+ // keep earned XP stable; only calculate on actions
+ return x;
+}
+function addXP(n,msg){state.xp=(state.xp||0)+n;toast("+"+n+" XP"+(msg?" • "+msg:""));save()}
+function streak(){
+ let s=0;
+ for(let i=0;i<31;i++){if(done(i))s++;else break}
+ return s;
+}
+function go(p){document.querySelectorAll(".page").forEach(x=>x.classList.toggle("active",x.id===p));document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===p));render()}
+document.querySelectorAll(".nav button").forEach(b=>b.onclick=()=>go(b.dataset.page));
+function render(){
+ let totalStudy=0,checks=0,days=0;
+ for(let i=0;i<31;i++){totalStudy+=+day(i).study||0;checks+=count(i);if(done(i))days++}
+ const level=Math.floor((state.xp||0)/500)+1,next=level*500;
+ document.getElementById("topStreak").textContent=streak();
+ document.getElementById("level").textContent=level;
+ document.getElementById("xp").textContent=state.xp||0;
+ document.getElementById("nextxp").textContent=next;
+ document.getElementById("xpbar").style.width=Math.min(100,((state.xp||0)%500)/500*100)+"%";
+ document.getElementById("days").textContent=days+"/31";
+ document.getElementById("daybar").style.width=days/31*100+"%";
+ document.getElementById("studyTotal").textContent=(totalStudy||0).toFixed(1).replace(".0","")+"h";
+ document.getElementById("habitPct").textContent=Math.round(checks/(31*8)*100)+"%";
+ document.getElementById("missionbar").style.width=days/31*100+"%";
+ document.getElementById("missiontext").textContent=`${days}/31 meaningful days • ${totalStudy.toFixed(1)} study hours • ${state.focusSessions||0} focus sessions`;
+ renderCalendar("dashcal");renderCalendar("dailycal");renderDaily();renderSubjects();renderWeekly();renderReflection();renderAchievements();
+}
+function renderCalendar(id){
+ const el=document.getElementById(id);if(!el)return;el.innerHTML="";
+ for(let i=0;i<31;i++){let b=document.createElement("button");b.className="cal"+(done(i)?" done":"")+(i===selected?" sel":"");b.innerHTML=`${i+1}<br><small>${["Thu","Fri","Sat","Sun","Mon","Tue","Wed"][i%7]}</small>`;b.onclick=()=>{selected=i;go("daily")};el.appendChild(b)}
+}
+function renderDaily(){
+ const sel=document.getElementById("daySelect");if(sel){sel.innerHTML="";for(let i=0;i<31;i++){let o=document.createElement("option");o.value=i;o.textContent=`Day ${i+1} — October ${i+1}`;o.selected=i===selected;sel.appendChild(o)}}
+ let d=day(selected);document.getElementById("dayTitle").textContent=`Day ${selected+1} — October ${selected+1}`;
+ const h=document.getElementById("habitList");h.innerHTML="";
+ HABITS.forEach(([k,label])=>{let l=document.createElement("label");l.className="habit";l.innerHTML=`<input type="checkbox" ${d.habits[k]?"checked":""}><span>${label}</span>`;l.firstChild.onchange=e=>{let before=!!d.habits[k];d.habits[k]=e.target.checked;if(e.target.checked&&!before)addXP(20);else save()};h.appendChild(l)});
+ document.getElementById("studyInput").value=d.study;document.getElementById("sleepInput").value=d.sleep;document.getElementById("notesInput").value=d.notes;
+ ["studyInput","sleepInput","notesInput"].forEach(id=>{document.getElementById(id).oninput=e=>{if(id==="studyInput")d.study=e.target.value;else if(id==="sleepInput")d.sleep=e.target.value;else d.notes=e.target.value;localStorage.setItem(KEY,JSON.stringify(state))}});
+}
+function selectDay(i){selected=i;render()}
+function allHabits(){let d=day(selected),added=0;HABITS.forEach(([k])=>{if(!d.habits[k]){d.habits[k]=true;added++}});state.xp=(state.xp||0)+added*20;save();toast("Day fully checked ✓")}
+function resetDay(){state.days[selected]={habits:{},study:"",sleep:"",notes:""};save()}
+function renderSubjects(){
+ const el=document.getElementById("subjects");if(!el)return;el.innerHTML="";
+ SUBJECTS.forEach(s=>{let topics=state.subjects[s],doneN=topics.filter(t=>t.done).length,pct=topics.length?Math.round(doneN/topics.length*100):0;
+ let box=document.createElement("div");box.className="card subject";box.innerHTML=`<h3>${s}</h3><div class="pct">${pct}%</div><div class="bar"><i style="width:${pct}%"></i></div><div class="small muted">${doneN}/${topics.length} topics complete</div><div class="topics"></div><div class="addtopic"><input class="input" placeholder="Add topic..."><button class="btn">+</button></div>`;
+ let list=box.querySelector(".topics");topics.forEach((t,idx)=>{let l=document.createElement("label");l.className="topic";l.innerHTML=`<input type="checkbox" ${t.done?"checked":""}><span>${escapeHtml(t.name)}</span>`;l.firstChild.onchange=e=>{let was=t.done;t.done=e.target.checked;if(t.done&&!was)state.xp=(state.xp||0)+30;save()};list.appendChild(l)});
+ let inp=box.querySelector("input"),btn=box.querySelector(".addtopic button");btn.onclick=()=>{let n=inp.value.trim();if(!n)return;topics.push({name:n,done:false});inp.value="";save()};el.appendChild(box)})
+}
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[c]))}
+function renderAchievements(){
+ const a=document.getElementById("achievements");let list=[
+["First Step",streak()>=1,"Complete your first meaningful day"],
+["3-Day Fire",streak()>=3,"Maintain a 3-day streak"],
+["7-Day Machine",streak()>=7,"Maintain a 7-day streak"],
+["100 XP",state.xp>=100,"Earn 100 XP"],
+["500 XP",state.xp>=500,"Reach Level 2"],
+["Focus Mode",state.focusSessions>=3,"Complete 3 Pomodoro sessions"]
+];a.innerHTML=list.map(x=>`<div class="achievement ${x[1]?"":"locked"}"><span>${x[1]?"🏆":"🔒"} ${x[0]}<br><small>${x[2]}</small></span><b>${x[1]?"✓":""}</b></div>`).join("")
+}
+function renderWeekly(){
+ const el=document.getElementById("weekly");if(!el)return;let weeks=[[0,6],[7,13],[14,20],[21,27],[28,30]];
+ el.innerHTML=weeks.map((w,i)=>{let sh=0,d=0;for(let x=w[0];x<=w[1];x++){sh+=+day(x).study||0;if(done(x))d++}return `<div class="weekrow"><b>Week ${i+1}</b><span><b>${sh.toFixed(1)}h</b> study • ${d}/${w[1]-w[0]+1} days</span><button class="btn" onclick="go('daily');selected=${w[0]};render()">Open</button></div>`}).join("")
+}
+function renderReflection(){
+ const el=document.getElementById("reflection");if(!el)return;
+ let fields=[["win","Biggest win of October"],["changed","What changed in me?"],["easier","What habit became easier?"],["held","What held me back?"],["backlog","Backlog progress"],["november","What I will carry into November"]];
+ el.innerHTML=fields.map(([k,l])=>`<label class="small muted">${l}<textarea data-ref="${k}">${escapeHtml(state.refs?.[k]||"")}</textarea></label>`).join("");
+ el.querySelectorAll("textarea").forEach(t=>t.oninput=e=>{state.refs=state.refs||{};state.refs[t.dataset.ref]=t.value;localStorage.setItem(KEY,JSON.stringify(state))})
+}
+function setTimer(min){pauseTimer();timerSec=min*60;timerTotal=timerSec;updateTimer()}
+function updateTimer(){let m=Math.floor(timerSec/60),s=timerSec%60;document.getElementById("time").textContent=`${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;document.getElementById("timerbar").style.width=(1-timerSec/timerTotal)*100+"%"}
+function startTimer(){if(timer)return;document.getElementById("timerStatus").textContent="Focus mode 🔥";timer=setInterval(()=>{timerSec--;updateTimer();if(timerSec<=0){pauseTimer();state.focusSessions=(state.focusSessions||0)+1;state.xp=(state.xp||0)+50;save();toast("Focus session complete! +50 XP");setTimer(5)}},1000)}
+function pauseTimer(){if(timer){clearInterval(timer);timer=null}document.getElementById("timerStatus").textContent="Paused."}
+function resetTimer(){pauseTimer();timerSec=timerTotal;document.getElementById("timerStatus").textContent="Ready to focus.";updateTimer()}
+function toast(msg){let t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1700)}
+function exportData(){let b=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="winter-arc-v2-backup.json";a.click()}
+function importData(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{state=JSON.parse(r.result);localStorage.setItem(KEY,JSON.stringify(state));render();toast("Backup imported ✓")}catch{toast("Invalid backup")}};r.readAsText(f)}
+function resetAll(){if(confirm("Delete all Winter Arc V2 data?")){localStorage.removeItem(KEY);location.reload()}}
+if("serviceWorker"in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+render();setTimer(25);
+</script>
+</body>
+</html>
