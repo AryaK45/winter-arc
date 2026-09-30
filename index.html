@@ -12,6 +12,16 @@
 button,input,textarea,select{font:inherit}button{cursor:pointer}.app{display:flex;min-height:100vh}.side{width:245px;background:#0b1016;border-right:1px solid var(--line);padding:20px 14px;position:sticky;top:0;height:100vh}.brand{font-weight:900;font-size:23px;letter-spacing:-1px;padding:8px 10px 22px}.brand span{color:var(--gold)}.nav{display:grid;gap:7px}.nav button{background:transparent;color:#b9c5d0;border:1px solid transparent;text-align:left;padding:12px 13px;border-radius:11px}.nav button.active,.nav button:hover{background:var(--panel2);color:#fff;border-color:var(--line)}.main{flex:1;max-width:1400px;margin:auto;padding:24px;width:100%}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}.eyebrow{color:var(--gold);font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:1.2px}.title{font-size:clamp(30px,4vw,48px);font-weight:900;letter-spacing:-2px;margin:4px 0}.sub{color:var(--muted)}.pill{padding:9px 12px;border:1px solid #6d4a12;background:#261b09;color:#fbbf24;border-radius:999px;font-weight:800;font-size:12px}.page{display:none}.page.active{display:block}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:rgba(17,24,32,.94);border:1px solid var(--line);border-radius:16px;padding:17px}.metric{font-size:28px;font-weight:900;margin-top:5px}.label{font-size:12px;color:var(--muted)}.bar{height:9px;background:#202b36;border-radius:99px;overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:99px}.section{margin-top:15px}.section h2{font-size:19px;margin:0 0 14px}.grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:15px}.habits{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.habit{display:flex;align-items:center;gap:10px;background:#0e151d;border:1px solid var(--line);padding:12px;border-radius:11px;font-size:13px}.habit input{width:20px;height:20px;accent-color:var(--gold)}.btn{background:#18222d;color:#fff;border:1px solid var(--line);padding:9px 13px;border-radius:9px;font-weight:750}.btn:hover{border-color:#56687a}.primary{background:var(--gold);color:#111;border-color:var(--gold)}.danger{background:#251214;color:#fecaca;border-color:#6f2429}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.input,.select,textarea{background:#0b1118;color:#fff;border:1px solid var(--line);border-radius:9px;padding:9px;width:100%;outline:none}.input:focus,textarea:focus{border-color:var(--gold)}textarea{min-height:90px;resize:vertical}.dailyhead{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:14px}.datepick{width:auto}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}.cal{background:#0e151d;border:1px solid var(--line);border-radius:9px;color:#fff;padding:11px 4px;text-align:center}.cal.done{background:#12351f;border-color:#258244}.cal.sel{outline:2px solid var(--gold)}.cal small{color:var(--muted)}.xp{color:#fbbf24;font-weight:900}.subjectGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.subject{min-height:180px}.subject h3{margin:0 0 7px}.subject .pct{font-size:24px;font-weight:900}.topics{display:grid;gap:6px;margin-top:12px}.topic{display:flex;gap:8px;align-items:center;font-size:12px}.topic input{accent-color:var(--green)}.addtopic{display:flex;gap:6px;margin-top:10px}.addtopic input{min-width:0}.timer{text-align:center;padding:28px}.time{font-size:76px;font-weight:900;letter-spacing:-3px;margin:5px}.timerbar{max-width:650px;margin:20px auto}.timer label{color:var(--muted);font-size:13px}.reviewGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.toast{position:fixed;right:18px;bottom:18px;background:#f59e0b;color:#111;padding:12px 15px;border-radius:11px;font-weight:800;opacity:0;transform:translateY(12px);transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:none}.muted{color:var(--muted)}.small{font-size:12px}.achievement{display:flex;justify-content:space-between;gap:10px;padding:11px;border:1px solid var(--line);border-radius:10px;margin-top:8px}.locked{opacity:.45}.list{display:grid;gap:8px}.score{font-weight:900}.weekrow{display:grid;grid-template-columns:110px 1fr 110px;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
 @media(max-width:1050px){.side{width:190px}.cards{grid-template-columns:repeat(2,1fr)}.subjectGrid{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
 @media(max-width:700px){.app{display:block}.side{width:100%;height:auto;position:relative;border-right:0;border-bottom:1px solid var(--line)}.nav{grid-template-columns:repeat(3,1fr)}.nav button{font-size:11px;padding:9px}.main{padding:15px}.cards{grid-template-columns:repeat(2,1fr)}.subjectGrid,.reviewGrid,.habits{grid-template-columns:1fr}.calendar{gap:4px}.cal{padding:8px 2px;font-size:11px}}
+
+.authbox{background:#0e151d;border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:14px}
+.authstatus{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.authforms{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.authforms .full{grid-column:1/-1}
+.authmsg{margin-top:10px;font-size:12px;color:var(--muted)}
+.cloud{padding:7px 10px;border:1px solid var(--line);border-radius:999px;font-size:11px;font-weight:800}
+.cloud.online{border-color:#258244;background:#12351f;color:#86efac}
+.cloud.local{border-color:#6d4a12;background:#261b09;color:#fbbf24}
+@media(max-width:700px){.authforms{grid-template-columns:1fr}.authforms .full{grid-column:auto}}
 </style>
 </head>
 <body>
@@ -30,7 +40,7 @@ button,input,textarea,select{font:inherit}button{cursor:pointer}.app{display:fle
 <main class="main">
 <header class="top">
 <div><div class="eyebrow">October 1 — October 31</div><div class="title">Winter Arc</div><div class="sub">Consistency over motivation. One day at a time.</div></div>
-<div class="pill">🔥 <span id="topStreak">0</span> day streak</div>
+<div class="row" style="justify-content:flex-end"><div class="cloud local" id="cloudStatus">☁️ Local only</div><div class="pill">🔥 <span id="topStreak">0</span> day streak</div></div>
 </header>
 
 <section id="dashboard" class="page active">
@@ -78,11 +88,40 @@ button,input,textarea,select{font:inherit}button{cursor:pointer}.app{display:fle
 </section>
 
 <section id="settings" class="page">
-<div class="card"><h2>⚙️ Settings & backup</h2><p class="muted">Your data is stored locally in this browser.</p><div class="row"><button class="btn" onclick="exportData()">⬇ Export backup</button><button class="btn" onclick="document.getElementById('import').click()">⬆ Import backup</button><input id="import" type="file" accept=".json" hidden onchange="importData(event)"><button class="btn danger" onclick="resetAll()">Reset everything</button></div><hr style="border-color:var(--line);margin:20px 0"><h2>📱 Install app</h2><p class="small muted">When running through Live Server, Chrome/Edge may offer an Install button in the address bar. Use it to get Winter Arc as its own app window.</p></div>
+<div class="card">
+  <h2>☁️ Account & cloud sync</h2>
+  <div class="authbox">
+    <div class="authstatus">
+      <div><b id="authTitle">Not signed in</b><div class="small muted" id="authEmail">Your tracker is currently local to this browser.</div></div>
+      <button class="btn danger" id="logoutBtn" style="display:none" onclick="logout()">Log out</button>
+    </div>
+    <div id="authForms">
+      <div class="authforms">
+        <input class="input" id="authEmailInput" type="email" placeholder="Email address" autocomplete="email">
+        <input class="input" id="authPasswordInput" type="password" placeholder="Password (min 6 characters)" autocomplete="current-password">
+        <button class="btn primary" onclick="signIn()">🔐 Log in</button>
+        <button class="btn" onclick="signUp()">✨ Create account</button>
+        <button class="btn" onclick="resetPassword()">📧 Reset password</button>
+      </div>
+    </div>
+    <div class="authmsg" id="authMsg">Create an account to sync the same Winter Arc progress across your laptop and phone.</div>
+  </div>
+  <h2>⚙️ Settings & backup</h2>
+  <p class="muted">Without an account, your data stays in this browser. When signed in, your Winter Arc data is backed up to Supabase and loaded on your other devices.</p>
+  <div class="row"><button class="btn" onclick="exportData()">⬇ Export backup</button><button class="btn" onclick="document.getElementById('import').click()">⬆ Import backup</button><input id="import" type="file" accept=".json" hidden onchange="importData(event)"><button class="btn danger" onclick="resetAll()">Reset everything</button></div>
+  <hr style="border-color:var(--line);margin:20px 0">
+  <h2>📱 Install app</h2>
+  <p class="small muted">When running through Live Server, Chrome/Edge may offer an Install button in the address bar. On GitHub Pages, use your browser's Install/Add to Home Screen option to use Winter Arc as an app.</p>
+</div>
 </section>
 </main></div><div class="toast" id="toast"></div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+const SUPABASE_URL="https://pfxgwaxvzsclyauzjfv.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY="sb_publishable_K1SYR-063nll82pngguQhg_2VfKD7IM";
+const supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
+let currentUser=null,cloudSyncTimer=null,authInitialized=false;
 const KEY="winterArcV2";
 const OLD="winterArcOct2026";
 const HABITS=[
@@ -146,7 +185,7 @@ function renderDaily(){
  const h=document.getElementById("habitList");h.innerHTML="";
  HABITS.forEach(([k,label])=>{let l=document.createElement("label");l.className="habit";l.innerHTML=`<input type="checkbox" ${d.habits[k]?"checked":""}><span>${label}</span>`;l.firstChild.onchange=e=>{let before=!!d.habits[k];d.habits[k]=e.target.checked;if(e.target.checked&&!before)addXP(20);else save()};h.appendChild(l)});
  document.getElementById("studyInput").value=d.study;document.getElementById("sleepInput").value=d.sleep;document.getElementById("notesInput").value=d.notes;
- ["studyInput","sleepInput","notesInput"].forEach(id=>{document.getElementById(id).oninput=e=>{if(id==="studyInput")d.study=e.target.value;else if(id==="sleepInput")d.sleep=e.target.value;else d.notes=e.target.value;localStorage.setItem(KEY,JSON.stringify(state))}});
+ ["studyInput","sleepInput","notesInput"].forEach(id=>{document.getElementById(id).oninput=e=>{if(id==="studyInput")d.study=e.target.value;else if(id==="sleepInput")d.sleep=e.target.value;else d.notes=e.target.value;save()}});
 }
 function selectDay(i){selected=i;render()}
 function allHabits(){let d=day(selected),added=0;HABITS.forEach(([k])=>{if(!d.habits[k]){d.habits[k]=true;added++}});state.xp=(state.xp||0)+added*20;save();toast("Day fully checked ✓")}
@@ -177,7 +216,7 @@ function renderReflection(){
  const el=document.getElementById("reflection");if(!el)return;
  let fields=[["win","Biggest win of October"],["changed","What changed in me?"],["easier","What habit became easier?"],["held","What held me back?"],["backlog","Backlog progress"],["november","What I will carry into November"]];
  el.innerHTML=fields.map(([k,l])=>`<label class="small muted">${l}<textarea data-ref="${k}">${escapeHtml(state.refs?.[k]||"")}</textarea></label>`).join("");
- el.querySelectorAll("textarea").forEach(t=>t.oninput=e=>{state.refs=state.refs||{};state.refs[t.dataset.ref]=t.value;localStorage.setItem(KEY,JSON.stringify(state))})
+ el.querySelectorAll("textarea").forEach(t=>t.oninput=e=>{state.refs=state.refs||{};state.refs[t.dataset.ref]=t.value;save()})
 }
 function setTimer(min){pauseTimer();timerSec=min*60;timerTotal=timerSec;updateTimer()}
 function updateTimer(){let m=Math.floor(timerSec/60),s=timerSec%60;document.getElementById("time").textContent=`${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;document.getElementById("timerbar").style.width=(1-timerSec/timerTotal)*100+"%"}
@@ -186,10 +225,138 @@ function pauseTimer(){if(timer){clearInterval(timer);timer=null}document.getElem
 function resetTimer(){pauseTimer();timerSec=timerTotal;document.getElementById("timerStatus").textContent="Ready to focus.";updateTimer()}
 function toast(msg){let t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1700)}
 function exportData(){let b=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="winter-arc-v2-backup.json";a.click()}
-function importData(e){let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{state=JSON.parse(r.result);localStorage.setItem(KEY,JSON.stringify(state));render();toast("Backup imported ✓")}catch{toast("Invalid backup")}};r.readAsText(f)}
-function resetAll(){if(confirm("Delete all Winter Arc V2 data?")){localStorage.removeItem(KEY);location.reload()}}
+function importData(e){
+  let f=e.target.files[0];if(!f)return;
+  let r=new FileReader();
+  r.onload=()=>{try{
+    state=JSON.parse(r.result);
+    SUBJECTS.forEach(s=>{if(!state.subjects?.[s])state.subjects[s]=[]});
+    localStorage.setItem(KEY,JSON.stringify(state));
+    render();scheduleCloudSave();toast("Backup imported ✓");
+  }catch{toast("Invalid backup")}};
+  r.readAsText(f);
+}
+async function resetAll(){
+  if(!confirm("Delete all Winter Arc data? This will also delete your cloud backup if you are signed in."))return;
+  if(currentUser){
+    const {error}=await supabaseClient.from("winter_arc_data").delete().eq("user_id",currentUser.id);
+    if(error){toast("Cloud reset failed");return;}
+  }
+  localStorage.removeItem(KEY);location.reload();
+}
+
+function setAuthMessage(msg,ok=false){
+  const el=document.getElementById("authMsg");
+  if(el){el.textContent=msg;el.style.color=ok?"#86efac":"var(--muted)";}
+}
+function setCloudStatus(text,online){
+  const el=document.getElementById("cloudStatus");
+  if(!el)return;
+  el.textContent=text;
+  el.className="cloud "+(online?"online":"local");
+}
+function updateAuthUI(){
+  const title=document.getElementById("authTitle"),email=document.getElementById("authEmail");
+  const forms=document.getElementById("authForms"),logout=document.getElementById("logoutBtn");
+  if(currentUser){
+    title.textContent="☁️ Signed in";
+    email.textContent=currentUser.email||"Account connected";
+    forms.style.display="none";logout.style.display="";
+    setCloudStatus("☁️ Cloud synced",true);
+  }else{
+    title.textContent="Not signed in";
+    email.textContent="Your tracker is currently local to this browser.";
+    forms.style.display="";
+    logout.style.display="none";
+    setCloudStatus("☁️ Local only",false);
+  }
+}
+async function cloudLoadOrCreate(){
+  if(!currentUser)return;
+  setCloudStatus("☁️ Syncing…",true);
+  const {data,error}=await supabaseClient.from("winter_arc_data").select("data").eq("user_id",currentUser.id).maybeSingle();
+  if(error){setCloudStatus("☁️ Sync error",false);setAuthMessage("Signed in, but cloud data could not be loaded: "+error.message);return;}
+  if(data?.data && typeof data.data==="object" && Object.keys(data.data).length){
+    state=data.data;
+    SUBJECTS.forEach(s=>{if(!state.subjects?.[s])state.subjects[s]=[]});
+    localStorage.setItem(KEY,JSON.stringify(state));
+    render();
+    setAuthMessage("Cloud data loaded on this device ✓",true);
+    setCloudStatus("☁️ Cloud synced",true);
+  }else{
+    const {error:upErr}=await supabaseClient.from("winter_arc_data").upsert(
+      {user_id:currentUser.id,data:state,updated_at:new Date().toISOString()},
+      {onConflict:"user_id"}
+    );
+    if(upErr){setCloudStatus("☁️ Sync error",false);setAuthMessage("Account created, but initial backup failed: "+upErr.message);return;}
+    setAuthMessage("Your current local tracker has been backed up to the cloud ✓",true);
+    setCloudStatus("☁️ Cloud synced",true);
+  }
+}
+function scheduleCloudSave(){
+  if(!currentUser || !authInitialized)return;
+  clearTimeout(cloudSyncTimer);
+  setCloudStatus("☁️ Saving…",true);
+  cloudSyncTimer=setTimeout(async()=>{
+    const {error}=await supabaseClient.from("winter_arc_data").upsert(
+      {user_id:currentUser.id,data:state,updated_at:new Date().toISOString()},
+      {onConflict:"user_id"}
+    );
+    if(error){setCloudStatus("☁️ Sync error",false);setAuthMessage("Local save worked, but cloud save failed: "+error.message);}
+    else{setCloudStatus("☁️ Cloud synced",true);}
+  },700);
+}
+async function signUp(){
+  const email=document.getElementById("authEmailInput").value.trim();
+  const password=document.getElementById("authPasswordInput").value;
+  if(!email||!password){setAuthMessage("Enter an email and password.");return;}
+  if(password.length<6){setAuthMessage("Password must be at least 6 characters.");return;}
+  setAuthMessage("Creating your account…");
+  const {data,error}=await supabaseClient.auth.signUp({email,password});
+  if(error){setAuthMessage(error.message);return;}
+  if(data.session){
+    setAuthMessage("Account created and signed in ✓",true);
+  }else{
+    setAuthMessage("Account created! Check your email and click the confirmation link, then return to Winter Arc.",true);
+  }
+}
+async function signIn(){
+  const email=document.getElementById("authEmailInput").value.trim();
+  const password=document.getElementById("authPasswordInput").value;
+  if(!email||!password){setAuthMessage("Enter your email and password.");return;}
+  setAuthMessage("Logging in…");
+  const {error}=await supabaseClient.auth.signInWithPassword({email,password});
+  if(error){setAuthMessage(error.message);return;}
+  setAuthMessage("Logged in ✓",true);
+}
+async function resetPassword(){
+  const email=document.getElementById("authEmailInput").value.trim();
+  if(!email){setAuthMessage("Enter your email address first.");return;}
+  setAuthMessage("Sending password reset email…");
+  const {error}=await supabaseClient.auth.resetPasswordForEmail(email,{redirectTo:"https://aryak45.github.io/winter-arc/"});
+  if(error){setAuthMessage(error.message);return;}
+  setAuthMessage("Password reset email sent. Check your inbox.",true);
+}
+async function logout(){
+  const {error}=await supabaseClient.auth.signOut();
+  if(error){setAuthMessage(error.message);return;}
+  currentUser=null;authInitialized=true;updateAuthUI();setAuthMessage("Logged out. Your local copy remains on this device.");
+}
+async function initAuth(){
+  const {data:{session}}=await supabaseClient.auth.getSession();
+  currentUser=session?.user||null;
+  authInitialized=true;
+  updateAuthUI();
+  if(currentUser)await cloudLoadOrCreate();
+  supabaseClient.auth.onAuthStateChange(async(event,session)=>{
+    currentUser=session?.user||null;
+    updateAuthUI();
+    if(currentUser && (event==="SIGNED_IN"||event==="INITIAL_SESSION"))await cloudLoadOrCreate();
+  });
+}
+
 if("serviceWorker"in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
-render();setTimer(25);
+render();setTimer(25);initAuth();
 </script>
 </body>
 </html>
